@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # The branch you want to trigger the deployment
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out your repository with LFS files
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true # This is the critical line for LFS support
+
+      # Add your static site build steps here (if any)
+      # For example, for a Jekyll site, you would add a build step here
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload the site's contents as a Pages artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.' # The directory containing your site's files
+
+      # Deploy the artifact to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
