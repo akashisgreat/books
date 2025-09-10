@@ -187,7 +187,7 @@ body {
     <div class="explorer" id="explorer"></div>
 
     <script>
-        const xmlUrl = ".data.xml"; // XML File URL
+        const xmlUrl = "data.xml"; // XML File URL
         //const pdfjsViewerPath = "root/pdfjs/web/viewer.html?file=";
         const pdfjsViewerPath = "";
         let currentPath = "/"; // Store the current path
@@ -231,7 +231,8 @@ body {
                 let item;
                 if (typeof obj[key] === "string") {
                     item = document.createElement("a");
-                    item.href = pdfjsViewerPath + '../../../' + obj[key];
+                    //item.href = pdfjsViewerPath + '../../../' + obj[key];
+                    item.href = pdfjsViewerPath + '/' + obj[key];
                     item.textContent = key;
                     item.target = "_blank";
                     item.classList.add("file");
