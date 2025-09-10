@@ -27,14 +27,11 @@
         <directory name="Physics">
           <file name="Concepts-of-Physics-By-H-C-Verma.pdf"></file>
           <file name="keph101.pdf"></file>
-          <file name="keph101.xopp"></file>
           <file name="keph102.pdf"></file>
           <file name="keph103.pdf"></file>
           <file name="keph104.pdf"></file>
-          <file name="keph104.xopp"></file>
           <file name="keph105.pdf"></file>
           <file name="keph106.pdf"></file>
-          <file name="keph106.xopp"></file>
           <file name="keph107.pdf"></file>
           <file name="keph1a1.pdf"></file>
           <file name="keph1an.pdf"></file>
@@ -46,25 +43,15 @@
           <file name="fhes101.pdf"></file>
           <file name="fhes102.pdf"></file>
           <file name="fhes103.pdf"></file>
-          <file name="fhes103.xopp"></file>
           <file name="fhes104.pdf"></file>
-          <file name="fhes104.xopp"></file>
           <file name="fhes105.pdf"></file>
-          <file name="fhes105.xopp"></file>
           <file name="fhes106.pdf"></file>
-          <file name="fhes106.xopp"></file>
           <file name="fhes107.pdf"></file>
-          <file name="fhes107.xopp"></file>
           <file name="fhes108.pdf"></file>
-          <file name="fhes108.xopp"></file>
           <file name="fhes109.pdf"></file>
-          <file name="fhes109.xopp"></file>
           <file name="fhes110.pdf"></file>
-          <file name="fhes110.xopp"></file>
           <file name="fhes111.pdf"></file>
-          <file name="fhes111.xopp"></file>
           <file name="fhes112.pdf"></file>
-          <file name="fhes112.xopp"></file>
           <file name="fhes113.pdf"></file>
           <file name="fhes114.pdf"></file>
           <file name="fhes1gl.pdf"></file>
@@ -272,7 +259,6 @@
         </directory>
       </directory>
     </directory>
-    <file name="index.html"></file>
     <directory name="NonTech">
       <directory name="0_Syllabus">
         <file name="0_Competition_syllabus.pdf"></file>
@@ -295,7 +281,6 @@
       </directory>
     </directory>
     <directory name="SSA Job">
-      <file name="amin concept.xopp"></file>
       <directory name="DLRS_Amin">
         <file name="Bhu-Survekshan Software User  manual (BS).pdf"></file>
         <file name="Compendium (Sankalian).pdf"></file>
@@ -304,10 +289,7 @@
         <file name="R2R Software User manual (R2R).pdf"></file>
         <file name="Surveying manual.pdf"></file>
         <file name="Technical manual (Takniki Magrdarsika).pdf"></file>
-        <file name="Technical manual (Takniki Magrdarsika).xopp"></file>
       </directory>
-      <file name="jobs list.xopp"></file>
-      <file name="ssa notes.xopp"></file>
     </directory>
     <directory name="Tech">
       <directory name="CAD">
@@ -317,7 +299,6 @@
       <directory name="Civil Engg">
         <directory name="0_Syllabus">
           <file name="0_Syllabus_Civil_engg.pdf"></file>
-          <file name="0_Syllabus_Civil_engg.xopp"></file>
           <file name="Book list by jaspal sir with Marking.pdf"></file>
           <file name="Books List by jaspal sir.pdf"></file>
           <file name="Diploma Syllabus SEM 1.pdf"></file>
@@ -350,7 +331,6 @@
           <file name="IS_1172.pdf"></file>
           <file name="IS-456-with-all-ammendments.pdf"></file>
           <file name="IS 800:2007 - Steel codes.pdf"></file>
-          <file name="IS Code 4562000.PDF"></file>
           <file name="is.sp.23.1982.pdf"></file>
           <file name="STEEL TABLES BY R AGOR, BIRLA PUBLICATIONS - By EasyEngineering.net.pdf"></file>
         </directory>
