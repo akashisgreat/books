@@ -191,7 +191,7 @@
 
   <script>
      const xmlUrl = "data.xml"; // XML File URL
-     const rootpath = "."
+     const rootpath = "./"
 
         function fetchXML(url) {
             return fetch(url)
@@ -207,7 +207,7 @@
 
             [...node.children].forEach(child => {
                 if (child.tagName === "file") {
-                    obj[child.getAttribute("name")] = `${rootpath}` + "/" + `${currentPath}/${child.getAttribute("name")}`;//---------------
+                    obj[child.getAttribute("name")] = `${rootpath}` + `${currentPath}/${child.getAttribute("name")}`;//---------------
                 } else if (child.tagName === "directory") {
                     obj[child.getAttribute("name")] = convertXMLToJSON(child, currentPath);
                 }
