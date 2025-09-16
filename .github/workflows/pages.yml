@@ -26,7 +26,7 @@ jobs:
           git lfs checkout   # ✅ replaces pointer files with binaries
 
       - name: Verify files
-        run: ls -lhR ./docs   # 🔍 check that files are real
+        run: ls -lhR ./  # 🔍 check that files are real
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs   # or ./ if your site is in root
+          path: ./  # or ./ if your site is in root
 
       - name: Deploy to GitHub Pages
         id: deployment
