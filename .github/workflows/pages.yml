@@ -1,0 +1,36 @@
+name: Build and Deploy GitHub Pages (with LFS)
+
+on:
+  push:
+    branches:
+      - main   # or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true   # 🔑 fetch actual LFS files
+
+      - name: Pull LFS files
+        run: git lfs pull
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 👇 If your site is in /, change path accordingly
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./   # replace with ./ if site files are in root
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
