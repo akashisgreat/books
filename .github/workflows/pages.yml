@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write   # ✅ allow fetching LFS
       pages: write
       id-token: write
 
@@ -17,19 +17,24 @@ jobs:
       - name: Checkout repository (with LFS)
         uses: actions/checkout@v4
         with:
-          lfs: true   # 🔑 fetch actual LFS files
+          lfs: true   # 🔑 fetch real LFS files
 
-      - name: Pull LFS files
-        run: git lfs pull
+      - name: Ensure LFS files are pulled
+        run: |
+          git lfs install
+          git lfs pull
+          git lfs checkout   # ✅ replaces pointer files with binaries
+
+      - name: Verify files
+        run: ls -lhR ./docs   # 🔍 check that files are real
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 👇 If your site is in /, change path accordingly
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./   # replace with ./ if site files are in root
+          path: ./docs   # or ./ if your site is in root
 
       - name: Deploy to GitHub Pages
         id: deployment
